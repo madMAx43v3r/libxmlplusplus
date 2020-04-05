@@ -759,6 +759,7 @@ void Node::free_wrappers(xmlNode* node)
       node->_private = nullptr;
       return;
     case XML_DOCUMENT_NODE:
+    case XML_HTML_DOCUMENT_NODE:
       //Do not free now. The Document is usually the one who owns the caller.
       return;
     default:
